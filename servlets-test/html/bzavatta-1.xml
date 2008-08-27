@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<talia:source xmlns:talia="http://www.talia.org/">
+  <talia:metadata>
+    <talia:maintype>contribution</talia:maintype>
+    <talia:type>essay</talia:type>
+    <talia:subtype>html</talia:subtype>
+    <talia:siglum>bzavatta-1</talia:siglum>
+    <talia:authors>
+      <talia:author>
+        <talia:lastname>Zavatta</talia:lastname>
+        <talia:firstname>Benedetta</talia:firstname>
+      </talia:author>
+    </talia:authors>
+    <talia:title>«Un frammento di fato?»: l’influenza di Emerson sulla critica nietzscheana al Cristianesimo</talia:title>
+    <talia:standard_title>«Un frammento di fato?»: l’influenza di Emerson sulla critica nietzscheana al Cristianesimo, HyperNietzsche, 2006-04-25</talia:standard_title>
+    <talia:language>it</talia:language>
+    <talia:date>2006-04-25</talia:date>
+  </talia:metadata>
+  <talia:versions>
+    <talia:version>
+      <talia:url>http://www.nietzschesource.org/installations/default/submission/uploads/14172/bzavatta-1.html</talia:url>
+    </talia:version>
+  </talia:versions>
+</talia:source>
+

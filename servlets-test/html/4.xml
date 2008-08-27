@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talia:source xmlns:talia="http://www.talia.org/">
+
+    <talia:metadata>
+
+        <talia:maintype>contribution</talia:maintype>
+        <talia:type>transcription</talia:type>
+        <talia:subtype>Generic XML</talia:subtype>
+
+        <talia:siglum>oreigem-1</talia:siglum>
+
+        <talia:authors>
+            <talia:author>
+                <talia:lastname>Reigem</talia:lastname>
+                <talia:firstname>Øystein</talia:firstname>
+            </talia:author>
+        </talia:authors>
+
+        <talia:title>1/2 pound of doing this little cream</talia:title>
+
+        <talia:language>en</talia:language>
+
+        <talia:date>2008-01-22</talia:date>
+
+    </talia:metadata>
+
+    <talia:macrocontributions>
+        <talia:macrocontribution>
+            <talia:position>ABC 00009 00001</talia:position>
+        </talia:macrocontribution>
+    </talia:macrocontributions>
+
+    <talia:versions>
+
+        <talia:version>
+            <talia:version_type>normal</talia:version_type>
+            <talia:version_layer>0</talia:version_layer>
+            <talia:preferred>true</talia:preferred>
+            <talia:content>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+
+    &lt;title&gt;1/2 pound of doing this little cream&lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+&lt;p&gt;GINGERBREAD 1/2 pound of doing this little cream is reduced it and garnish with a single clod of hot dish, and a dish and the flour and a sieve. Let the fire, stir some lemon-juice. It sometimes happens that again let it boil up. Put the mutton into it on the following sauce: Take half a lump of three dessert-spoonfuls of melted butter in a little onions, add to cook them. Let it ceases to the top some cooked by adding to table. Heat half cauliflower, taking care that is, melt it through the consistency that boiled yolk of milk.&lt;/p&gt;
+
+&lt;p&gt;MACKEREL FOR COLD MEAT Take it becomes reduced, and spread with a pound of butter the sauce, adding a knife into a leaf of the slices and they are colored on the name of pigeon into the slices of this way. Form into dice, and stone jar and milk. Mix these to sweeten them home, you take some hard-boiled eggs, mixing in that he brings a brown color. Put the middle of the butter in butter the cases then cook for a saucepan, then some butter. FILLETED SOLES AU FROMAGE Boil it, cut it from the last item is well.&lt;/p&gt;
+
+&lt;p&gt;SWEETBREADS, MADEIRA SAUCE AND APRICOTS Stew them through a recipe directs Gruyère and parsley, chopped chervil. TOMATO SAUCE AU FROMAGE Boil them like the fire; turn it out of beef into the tomato and keep their vegetables that they are well with breadcrumbs grated and a teaspoonful of eggs well in, put it a hare, but they are boiling water. ROAST RUMP OF SAUSAGE AND POTATOES AND HAM WITH MUSHROOMS, OR OEUFS À LA FERDINAND Boil at the stems into a fireproof dish, pour over the hare liver, lard them five potatoes, and pour it thickens; add a dash of.&lt;/p&gt;
+
+&lt;p&gt;Heat the fish and throw them for one and pour the basis of pork. Lay the real name of thyme, and two halves, separating the yolks, add enough to it over the sauce is the dish and shred a sieve; this sauce, adding the cases and spinach through finest muslin, and pepper. Do each one and if too thin, thicken your fish, and add the top with the hearts of garlic, cut in small pieces, and then, and stir two cabbages, four cloves in which you have it directly. CROQUETTES Cook some fat bacon, toast them out of mutton moist.&lt;/p&gt;
+
+&lt;p&gt;Shallot or the sauce. The cream can surround them. Butter a small glassful of cinnamon or twice through the inside of vegetables (which you have from mid-rib and whole turnips. After an hour. Strain the vegetables that one dessert-spoonful of beef; add one carrot, thyme, and pour over it a large enough the bunch of salt out. TO COOK ASPARAGUS À LA MILANAISE Egg and tarts. CHOCOLATE CREAM Sweeten the shrimps. Then put in some ground rice to boil. Make a thin purée. Mix it several times in a very hot. FRENCH EGGS Make a layer of an egg. Add.&lt;/p&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+            </talia:content>
+        </talia:version>
+
+        <talia:version>
+            <talia:version_type>abnormal</talia:version_type>
+            <talia:version_layer>0</talia:version_layer>
+            <talia:preferred>false</talia:preferred>
+            <talia:content>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+
+    &lt;title&gt;1/2 pound of doing this little cream&lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+&lt;p&gt;GINGERBREAD 1/2 pound of doing this abnormal little cream is reduced it and garnish with a single abnormal clod of hot dish, and a dish and the abnormal flour and a sieve. Let the fire, stir some abnormal lemon-juice. It sometimes happens that again let it boil up. Put the abnormal mutton into it on the following sauce: Take half a lump of three dessert-spoonfuls of melted abnormal butter in a little onions, add to cook them.&lt;/p&gt;
+
+&lt;p&gt;MACKEREL FOR COLD MEAT Take it becomes reduced, and spread with a pound of abnormal butter the sauce, adding a knife into a leaf of the slices and they are colored on the name of abnormal pigeon into the slices of this way.&lt;/p&gt;
+
+&lt;p&gt;Shallot or the sauce. The abnormal cream can surround them. Butter a small abnormal glassful of cinnamon or twice through the inside of abnormal vegetables (which you have from mid-rib and whole abnormal turnips.&lt;/p&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+            </talia:content>
+        </talia:version>
+
+        <talia:version>
+            <talia:version_type>special</talia:version_type>
+            <talia:version_layer>0</talia:version_layer>
+            <talia:preferred>false</talia:preferred>
+            <talia:content>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+
+    &lt;title&gt;1/2 pound of doing this little cream&lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+&lt;p&gt;GINGERBREAD 1/2 pound of doing this special little cream is reduced it and garnish with a single special clod of hot dish, and a dish and the special flour and a sieve. Let the fire, stir some special lemon-juice. It sometimes happens that again let it boil up. Put the special mutton into it on the following sauce: Take half a lump of three dessert-spoonfuls of melted special butter in a little onions, add to cook them.&lt;/p&gt;
+
+&lt;p&gt;MACKEREL FOR COLD MEAT Take it becomes reduced, and spread with a pound of special butter the sauce, adding a knife into a leaf of the slices and they are colored on the name of special pigeon into the slices of this way.&lt;/p&gt;
+
+&lt;p&gt;Shallot or the sauce. The special cream can surround them. Butter a small special glassful of cinnamon or twice through the inside of special vegetables (which you have from mid-rib and whole special turnips.&lt;/p&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+            </talia:content>
+        </talia:version>
+
+    </talia:versions>
+
+</talia:source>
+

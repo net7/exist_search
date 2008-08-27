@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talia:source xmlns:talia="http://www.talia.org/">
+
+    <talia:metadata>
+
+        <talia:maintype>contribution</talia:maintype>
+        <talia:type>essay</talia:type>
+        <talia:subtype>pdf</talia:subtype>
+
+        <talia:siglum>oreigemrtofani-1</talia:siglum>
+
+        <talia:authors>
+            <talia:author>
+                <talia:lastname>Tofani</talia:lastname>
+                <talia:firstname>Roberto</talia:firstname>
+            </talia:author>
+        </talia:authors>
+
+        <talia:title>111 EGG Recipes</talia:title>
+
+        <talia:language>en</talia:language>
+
+        <talia:date>2008-04-26</talia:date>
+
+    </talia:metadata>
+
+    <talia:macrocontributions>
+        <talia:macrocontribution>
+            <talia:position>ABC 00011 00003</talia:position>
+        </talia:macrocontribution>
+    </talia:macrocontributions>
+
+    <talia:versions>
+
+        <talia:version>
+            <talia:version_type>normal</talia:version_type>
+            <talia:version_layer>0</talia:version_layer>
+            <talia:preferred>true</talia:preferred>
+            <talia:url>http://www.allfreecrafts.com/ebooks/eggs1.pdf</talia:url>
+        </talia:version>
+
+    </talia:versions>
+
+</talia:source>
+

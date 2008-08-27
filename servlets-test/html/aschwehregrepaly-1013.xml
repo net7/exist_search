@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<talia:source xmlns:talia="http://www.talia.org/">
+  <talia:metadata>
+    <talia:maintype>contribution</talia:maintype>
+    <talia:type>facsimile</talia:type>
+    <talia:subtype>color</talia:subtype>
+    <talia:siglum>aschwehregrepaly-1013</talia:siglum>
+    <talia:authors>
+      <talia:author>
+        <talia:lastname>Schwehr</talia:lastname>
+        <talia:firstname>Armin</talia:firstname>
+      </talia:author>
+      <talia:author>
+        <talia:lastname>Grépály</talia:lastname>
+        <talia:firstname>Éva</talia:firstname>
+      </talia:author>
+    </talia:authors>
+    <talia:title/>
+    <talia:standard_title>_#_medium_fax_#_ _#_of_#_ N-VI-1,096</talia:standard_title>
+    <talia:language/>
+    <talia:date>2007-10-12</talia:date>
+  </talia:metadata>
+  <talia:versions>
+    <talia:version>
+      <talia:url>http://www.nietzschesource.org/installations/default/submission//uploads/15640/N-VI-1,096.jpg</talia:url>
+    </talia:version>
+  </talia:versions>
+</talia:source>
+

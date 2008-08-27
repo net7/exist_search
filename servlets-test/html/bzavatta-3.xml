@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<talia:source xmlns:talia="http://www.talia.org/">
+  <talia:metadata>
+    <talia:maintype>contribution</talia:maintype>
+    <talia:type>essay</talia:type>
+    <talia:subtype>html</talia:subtype>
+    <talia:siglum>bzavatta-3</talia:siglum>
+    <talia:authors>
+      <talia:author>
+        <talia:lastname>Zavatta</talia:lastname>
+        <talia:firstname>Benedetta</talia:firstname>
+      </talia:author>
+    </talia:authors>
+    <talia:title>«Ein Stück Fatum?»: Der Einfluss Emersons auf Nietzsches Kritik am Christentum</talia:title>
+    <talia:standard_title>«Ein Stück Fatum?»: Der Einfluss Emersons auf Nietzsches Kritik am Christentum, HyperNietzsche, 2006-05-09</talia:standard_title>
+    <talia:language>de</talia:language>
+    <talia:date>2006-05-09</talia:date>
+  </talia:metadata>
+  <talia:versions>
+    <talia:version>
+      <talia:url>http://www.nietzschesource.org/installations/default/submission/uploads/14175/zavatta-de.html</talia:url>
+    </talia:version>
+  </talia:versions>
+</talia:source>
+

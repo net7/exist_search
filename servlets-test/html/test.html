@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+  html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <style type="text/css">
+      .purge {
+        background-color: #FCC;
+      }
+      .store {
+        background-color: #CFC;
+      }
+      .feed {
+        background-color: #EFE;
+      }
+      .normalSearch {
+        background-color: #CCF;
+      }
+    </style>
+
+    <script type="text/javascript" src="javascript/prototype-1.6.0.2.js"></script>
+
+    <script type="text/javascript">
+      function show_xml(theSelect) {
+        xmlFileName = theSelect.value;
+        new Ajax.Request(
+          xmlFileName,
+          {
+            method:'get',
+            onSuccess: function(transport) {
+                         // get xml as text
+                         var response = transport.responseText;
+                         // show in textarea
+                         //$("xml").writeAttribute("value", response);
+                         $("xml").value = response;
+                       },
+            onFailure: function() {
+                         alert('Something went wrong...')
+                       }
+          }
+        );
+      }
+    </script>
+
+  </head>
+
+  <body
+    onload="javascript:$('select-xml').options[0].selected = true; $('select-xml').onchange()"
+  >
+
+    <div class="purge">
+      <h1>purge</h1>
+      <form id="purge-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/purge" method="post">
+        <input type="submit" value="purge"/>
+      </form>
+    </div>
+
+    <div class="store">
+      <h1>store <small><small>(feed one contribution. first select local file in the list below. then - if desired - edit it in the textarea. then press 'store'. note - the format of these contributions aren't up to date)</small></small></h1>
+      <form id="store-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/store" method="post">
+        <table>
+          <tr>
+            <td valign="top">
+              <select id="select-xml" onchange="javascript:show_xml(this)">
+                <option value="1.xml"                    >1.xml</option>
+                <option value="2.xml"                    >2.xml</option>
+                <option value="3.xml"                    >3.xml</option>
+                <option value="4.xml"                    >4.xml</option>
+                <option value="5.xml"                    >5.xml</option>
+                <option value="6.xml"                    >6.xml w/url to pdf</option>
+                <option value="7.xml"                    >7.xml w/unclean html</option>
+                <option value="igerikesikrawehl-561.xml" >igerikesikrawehl-561.xml</option>
+                <option value="abertino-1.xml"           >abertino-1.xml w/url to html</option>
+                <option value="bzavatta-1.xml"           >bzavatta-1.xml w/url to html</option>
+                <option value="bzavatta-3.xml"           >bzavatta-3.xml w/url to html</option>
+                <option value="aschwehregrepaly-1013.xml">aschwehregrepaly-1013.xml w/url to fax (jpg)</option>
+              </select>
+            </td>
+            <td>
+              <textarea id="xml" name="xml" cols="80" rows="16"></textarea>
+              <!-- a field/parameter that tells the servlet the request comes from this test form -->
+              <input type="text" name="test" value="yes"/>
+            </td>
+            <td valign="bottom">
+              <input type="submit" value="store"/>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <table>
+      <tr>
+
+        <td>
+          <div class="feed">
+            <h1>feed <small>(all contributions from the nietzschesource Hyper)</small></h1>
+            <form id="feed-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/ServiceToFeedExist" method="get">
+              <input type="submit" value="feed"/>
+            </form>
+          </div>
+        </td>
+
+        <td>
+          <div class="feed">
+            <h1>special feed <small>that just feeds a small subset, with made-up macrocontribution data</small></h1>
+            <form id="feed-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/ServiceToFeedExist" method="get">
+              <input type="hidden" name="test" value="x"/>
+              <input type="submit" value="feed"/>
+            </form>
+          </div>
+        </td>
+
+      </tr>
+    </table>
+
+    <div class="normalSearch">
+      <h1>normal search</h1>
+      <form id="normal-search-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/NormalSearch" method="post">
+
+        words/phrases <input type="text" name="words"/>
+
+        operator
+        <select id="operator_select" name="operator">
+          <option value="or"       selected="selected">or</option>
+          <option value="and"                         >and</option>
+          <option value="distance"                    >distance</option>
+        </select>
+
+        distance <input type="text" name="distance" value="1"/>
+
+        <hr/>
+
+        author <input type="text" name="author"/>
+
+        title <input type="text" name="title"/>
+
+        language
+        <select id="language_select" name="language">
+          <option value=""   selected="selected"></option>
+          <option value="de"                    >Deutsch</option>
+          <option value="it"                    >Italiano</option>
+          <option value="en"                    >English</option>
+          <option value="es"                    >Espanol</option>
+          <option value="fr"                    >Francais</option>
+          <option value="pt"                    >Portugues</option>
+        </select>
+
+        date <input type="text" name="date"/>
+
+        <hr/>
+
+        type
+        <select id="type_select" name="type" multiple="true">
+          <option value="essay"         selected="selected">essay</option>
+          <option value="comment"       selected="selected">comment</option>
+          <option value="transcription" selected="selected">transcription</option>
+          <option value="edition"       selected="selected">edition</option>
+          <!--
+          <option value="fax"           selected="selected">fax</option>
+          -->
+          <option value="facsimile"     selected="selected">facsimile</option>
+          <option value="path"          selected="selected">path</option>
+        </select>
+
+        <hr/>
+
+        preferred
+        <input type="checkbox" name="preferred" value="true"/>
+
+        <hr/>
+
+        order by
+        <select id="orderby_select" name="orderby">
+          <option value="author" selected="selected">author</option>
+          <option value="title"                     >title</option>
+          <option value="language"                  >language</option>
+          <option value="date"                      >date</option>
+          <option value="type"                      >type</option>
+          <option value="siglum"                    >siglum</option>
+        </select>
+
+        direction
+        <select id="direction_select" name="direction">
+          <option value="ascending"  selected="selected">ascending</option>
+          <option value="descending"                    >descending</option>
+        </select>
+
+        <hr/>
+
+        limit <input type="text" name="limit" value="3"/>
+        page <input type="text" name="page" value="1"/>
+
+        <hr/>
+
+        <input type="submit" value="search"/>
+
+      </form>
+    </div>
+
+  </body>
+
+</html>
+

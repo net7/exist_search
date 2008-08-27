@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tomcat-users>
+
+  <role rolename="manager"/>
+  <role rolename="admin"/>
+
+  <!-- roles for eXist and search -->
+  <role rolename="exist-feeder"/>
+  <role rolename="exist-searcher"/>
+
+  <user username="sindre" password="ess13lix" roles="admin,manager"/>
+
+  <user username="oystein"     password="arm14erf" roles="admin,manager,exist-feeder,exist-searcher"/>
+  <user username="someenduser" password="skr53eam" roles="exist-searcher"/>
+
+</tomcat-users>
+

@@ -1,0 +1,46 @@
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+
+    <!--
+    
+    defines fulltext and range indexes on an eXist collection for some Talia.
+
+    currently both the <content> element (the html content of contributions) 
+    and some elements of <metadata> (<author>, <title>) are fulltext indexed.
+    <content> is indexed WITH mixed content.
+    <author>, <title> is NOT indexed with mixed content.
+
+    mixed content is GOOD for the content because it keeps words from being split up by tags.
+    in eXist version 1.1 mixed content made exist:match tags fail.
+    this has been corrected in eXist version 1.2.
+
+    indexes are qname indexes, to help optimization of queries.
+
+    this file should be stored under the name 'collection.xconf'
+    into /db/system/config/db/collection_name,
+    where 'collection_name' is the name of the collection.
+    
+    -->
+
+    <!-- (namespace necessary here, even if not used _in_ this document) -->
+    <index xmlns:talia="http://www.talia.org/">
+    
+        <fulltext default="none" attributes="false">
+            <!-- (the documents contain two copies of author data,
+                 in the <metadata> and the <version> elements,
+                 and this index will cover them both) -->
+            <create qname="talia:author"/>
+            <create qname="talia:title"/>
+            <create qname="talia:content" content="mixed"/>
+        </fulltext>
+        
+        <create qname="talia:type" type="xs:string"/>
+        <create qname="talia:subtype" type="xs:string"/>
+        <create qname="talia:language" type="xs:string"/>
+        <create qname="talia:date" type="xs:string"/>
+        <create qname="talia:siglum" type="xs:string"/>
+
+        <create qname="talia:position" type="xs:string"/>
+
+    </index>
+    
+</collection>

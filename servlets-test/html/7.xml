@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talia:source xmlns:talia="http://www.talia.org/">
+
+    <talia:metadata>
+
+        <talia:maintype>contribution</talia:maintype>
+        <talia:type>transcription</talia:type>
+        <talia:subtype>Generic XML</talia:subtype>
+
+        <talia:siglum>rtofani-99</talia:siglum>
+
+        <talia:authors>
+            <talia:author>
+                <talia:lastname>Tofani</talia:lastname>
+                <talia:firstname>Roberto</talia:firstname>
+            </talia:author>
+        </talia:authors>
+
+        <talia:title>Unclean quantities over all the oven</talia:title>
+
+        <talia:language>en</talia:language>
+
+        <talia:date>2008-06-06</talia:date>
+
+    </talia:metadata>
+
+    <talia:macrocontributions>
+        <talia:macrocontribution>
+            <talia:position>ABC 00009 00006</talia:position>
+        </talia:macrocontribution>
+        <talia:macrocontribution>
+            <talia:position>XYZ 00001 00004</talia:position>
+        </talia:macrocontribution>
+    </talia:macrocontributions>
+
+    <talia:versions>
+
+        <talia:version>
+            <talia:version_type>normal</talia:version_type>
+            <talia:version_layer>0</talia:version_layer>
+            <talia:preferred>true</talia:preferred>
+            <talia:content>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+
+    &lt;title&gt;Unclean quantities over all the oven&lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+&lt;p&gt;Unclean quantities over all the oven for jam is ignorance.
+
+&lt;p&gt;Rub it to roast veal and one-half pound of light cake.&lt;/p&gt;
+
+&lt;p&gt;Unclean liqueur. This dish can be used, which serves to bake in Ghent who loved mushrooms.
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+            </talia:content>
+        </talia:version>
+
+        <talia:version>
+            <talia:version_type>another</talia:version_type>
+            <talia:version_layer>0</talia:version_layer>
+            <talia:preferred>false</talia:preferred>
+            <talia:content>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+  &lt;head&gt;
+
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"/&gt;
+
+    &lt;title&gt;Unclean quantities over all the oven&lt;/title&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+&lt;p&gt;Quantities over all the oven for jam is ignorance.&lt;/p&gt;
+
+&lt;p&gt;Rub it to roast unclean veal and one-half pound of light cake.
+
+&lt;p&gt;Liqueur. This dish can be used, which serves to bake in Ghent who loved mushrooms.&lt;/p&gt;
+
+  &lt;/body&gt;
+
+&lt;/html&gt;
+            </talia:content>
+        </talia:version>
+
+    </talia:versions>
+
+</talia:source>
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<talia:source xmlns:talia="http://www.talia.org/">
+  <talia:metadata>
+    <talia:maintype>contribution</talia:maintype>
+    <talia:type>edition</talia:type>
+    <talia:subtype>hnml</talia:subtype>
+    <talia:siglum>igerikesikrawehl-561</talia:siglum>
+    <talia:authors>
+      <talia:author>
+        <talia:lastname>Gerike</talia:lastname>
+        <talia:firstname>Inga</talia:firstname>
+      </talia:author>
+      <talia:author>
+        <talia:lastname>Krawehl</talia:lastname>
+        <talia:firstname>Stephanie Iris</talia:firstname>
+      </talia:author>
+    </talia:authors>
+    <talia:title />
+    <talia:standard_title>_#_medium_edition_#_ _#_of_#_ WS-280</talia:standard_title>
+    <talia:language />
+    <talia:date>2005-01-26</talia:date>
+  </talia:metadata>
+  <talia:versions>
+    <talia:version>
+      <talia:preferred>true</talia:preferred>
+      <talia:version_type>linear</talia:version_type>
+      <talia:version_layer>0</talia:version_layer>
+      <talia:content><div class="edition-text">280. <p><span class="head"><span class="sp">Mehr
+Achtung vor den Wissenden!</span> something</span> Bei der Concurrenz der Arbeit und der Verkäufer ist das
+<span class="sp">Publicum</span> zum Richter über das Handwerk gemacht: das hat aber keine strenge
+Sachkenntniss und urtheilt nach dem <span class="sp">Scheine</span> der Güte. Folglich wird die Kunst
+des Scheines (und vielleicht der Geschmack) unter der Herrschaft der Concurrenz steigen, dagegen die
+Qualität aller Erzeugnisse sich verschlechtern müssen. Folglich wird, wofern nur die Vernunft nicht
+im Werthe fällt, irgendwann jener Concurrenz ein Ende gemacht werden und ein neues Princip den Sieg
+über sie davontragen. Nur der Handwerksmeister sollte über das Handwerk urtheilen, und das Publicum
+abhängig sein vom Glauben an die Person des Urtheilenden und an seine Ehrlichkeit. Demnach keine
+anonyme Arbeit! Mindestens müsste ein Sachkenner als Bürge derselben dasein und
+<span class="sp">seinen</span> Namen als Pfand einsetzen, wenn der Name des Urhebers fehlt oder
+klanglos ist. Die <span class="sp">Wohlfeilheit</span> eines Werkes ist für den Laien eine andere
+Art Schein und Trug, da erst die <span class="sp">Dauerhaftigkeit</span> entscheidet, dass und
+inwiefern eine Sache wohlfeil ist; jene aber ist schwer und von dem Laien gar nicht zu beurtheilen.
+something Also: was Effect auf das Auge macht und wenig kostet, das bekommt jetzt das Uebergewicht, âsomething
+und das wird natürlich die Maschinenarbeit sein. Hinwiederum begünstigt die Maschine, das heisst
+die Ursache der grössten Schnelligkeit und Leichtigkeit der Herstellung, auch ihrerseits die
+<span class="sp">verkäuflichste</span> Sorte: sonst ist kein erheblicher Gewinn mit ihr zu machen;
+sie würde zu wenig gebraucht und zu oft stille stehen. Was aber am verkäuflichsten ist, darüber
+entscheidet das Publicum, wie gesagt: es muss das Täuschendste sein, das heisst Das, was einmal
+gut <span class="sp">scheint</span> und sodann auch wohlfeil <span class="sp">scheint</span>. Also
+auch auf dem Gebiete der Arbeit muss unser Losungswort sein: "Mehr Achtung vor den Wissenden!"</p>
+</div></talia:content>
+    </talia:version>
+  </talia:versions>
+</talia:source>
+
+<!--
+
+hyper: -> talia:
+
+xmlns:hyper="http://www.hyper.org" -> xmlns:talia="http://www.talia.org/"
+
+talia:data -> talia:content
+
+move
+<talia:maintype>...</talia:maintype>
+<talia:type>...</talia:type>
+<talia:subtype>...</talia:subtype>
+into
+<talia:metadata>
+
+move
+<talia:firstname>Inga</talia:firstname>
+below
+<talia:lastname>Gerike</talia:lastname>
+
+for docs with <url> add
+<talia:preferred>true</talia:preferred>
+
+<talia:type>fax</talia:type> -> <talia:type>facsimile</talia:type>
+
+-->
