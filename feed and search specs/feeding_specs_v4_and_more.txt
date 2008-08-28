@@ -1,0 +1,163 @@
+Here's the latest version of the feeding specs. See bottom of the document/mail for the specs themselves. The <talia:macrocontributions> stuff have been revamped since last time.
+
+As earlier the specs is not a dtd or xml schema, but more like a specific example of an xml document to be fed to eXist.
+
+ABOUT THE STRUCTURE
+
+In the example xml document we have a contribution related to a paragraph in a chapter in a book. This might be the most complex hierarchical relation a contribution will have to a macrocontribution. The chapter is a special level (granule) since we want it in the left menu of the result, but not in the (advanced) search form.
+
+A macrocontribution might have other complexities, that cannot be shown in an example with a single contribution. E.g, the macrocontribution might contain books with a mix of pages and paragraphs. Ideally this should be realized as a graph with two overlapping hierarchies. Instead Talia will assume a simplified structure where the pages come first, then the paragraphs. It is nevertheless a non-trivial structure.
+
+Another example is a macrocontribution with a book with chapters containing pages, but with some pages preceding the first chapter, breaking up the otherwise regular, three-level hierarchy (root level not counted).
+
+According to Danilo it will be possible to make a feeding service for this structure. I will describe how the structure will support search. Of course there are two sides to a search - the interface and the "engine", and strictly I can only argue for the engine. But according to Danilo the interface will be able to supply the search criteria we need.
+
+One difficulty with macrocontributions in Talia is that we can have two different hierarchies in the same macrocontribution. The complete hierarchy might have all the levels book, chapter and paragraph. The user meets this complete hierarchy in the left menu of the result list. (To be precise, she usually sees a subset of the hierarchy, but importantly all levels of the complete hierarchy are present, also chapter.) Then we have a simplified hierarchy, e.g book and paragraph, which the user meets in the advanced search form. The form has dropdown listboxes for two levels only, e.g, book and paragraph. Here the chapter level has been suppressed.
+
+When a contribution belongs to a macrocontribution, the data stored have information about the contribution's path in the complete hierarchy (see the talia:macrocontribution/talia:path element). The information is enough to support the structure of the left menu. For each node in the path we store (a) the granularity level (book or chapter, etc), (b) the uri and (c) the title.
+
+We also store (d) some position information. But this position information is related to the simplified hierarchy. When the macrocontribution has all three levels book, chapter and paragraph, the paragraph node has a position value within book, not within chapter, and the chapter node has no position information at all. The reasons for this? The simplified position information is easier for the feeding service to find than the complete position information. And the simplified position information is sufficient to support search and ordering.
+
+When the feed servlet has received contribution xml data from the feeding service, the former takes the path information and extends the data with a talia:macrocontribution/talia:search_key element. This value supports some kinds of search, and, importantly, supports the ordering we need for all kinds of macrocontribution search. The value is a hierarchical string containing information from the simplified hierarchy.
+
+Example value: "ABC.book.000003.para.000101". This is the value for a contribution related to the 101st paragraph of the 3rd book of the ABC macrocontribution.
+
+The numbers in the value are there for obvious reasons. The strings "book" and "para" are there to support macrocontributions with a mixed structure, like books with both pages and paragraphs. Strictly speaking the "book" value at the higher level might be unnecessary, but the "para" at the lower level helps distinguish between page 101 and paragraph 101, and makes sure that the pages come before the paragraphs.
+
+In general we would like to have larger granules before smaller ones. By accident the values "book", "chap", "page", "para", "zone", representing the granules in descending size, have ascending values that can be used directly for sorting.
+
+THE SEARCH
+
+There are four kinds of search that should be possible from the search interface:
+
+(1) Search from a click in left menu.
+
+The search will be for all contributions that belong to/below a certain granule (a certain book or chapter or page etc). This can be done with a search on uri - on the talia:macrocontribution/talia:uri element. The search will succeed even when the granule belongs to more than one macrocontribution, because the granule will have different uri's in the different macrocontributions.
+
+(This search I know will be possible for the interface to do, since the left menu is created from the result of a search, and the search servlet is able to include the necessary uri's in the result.)
+
+(2) Search on the whole macrocontribution.
+
+If the user does a "simple" search, or a search in the advanced search form without selecting any books, the search will be for all contributions of the macrocontribution. (Well of course, as in any macrocontribution search, the result will be restricted to those contributions that satisfy the full text criteria.) The search can be done with a wildcard search on the talia:macrocontribution/talia:search_key element. E.g if the macrocontribution's siglum is "ABC", a wildcard search on "ABC.*" will do the job.
+
+(3) Search for a book, in the advanced form.
+
+This can be done in more than one way. It can be done with a uri search as in (1). Alternatively, it can be done with a wildcard search. E.g, a search for "ABC.book.000003*" will find the contributions of book number 3 in the ABC macrocontribution. Finally, it can be done with a from/to search as described in (4).
+
+(4) Slice search, i.e, a from/to search in the advanced form.
+
+This is a search for a subsequence of a book, e.g, contributions for paragraphs 22 through 33 of a certain book. This can be done with a suitable search on the talia:macrocontribution/talia:search_key element. In the example just mentioned, searching for all values "ABC.book.000003.para.000022" through "ABC.book.000003.para.000033" will do the job.
+
+The interface must know these values to be able to do the search. E.g, it must know that book 3 contains contributions with talia:macrocontribution/talia:search_key elements "ABC.book.000003.para.000001" through "ABC.book.000003.para.003641". But if it does, it will also be able to supply meaningful default values if the user doesn't select a "from" or "to" value. The lowest value ("ABC.book.000003.para.000001") should be the default "from" value, and the highest one ("ABC.book.000003.para.003641") the default "to" value.
+
+With any search - be it of type (1), (2), (3), (4) or a future kind - the found contributions should be returned in the order of the hierrachy (the order of its leaf nodes). The talia:macrocontribution/talia:search_key element value is perfect for that job.
+
+The servlet should also do grouping on the result, i.e, wrap the the entries of the result list in elements that reflect the hierarchy, and thereby make easier the building of the left menu of the result page. Since the search servlet can always order the found contributions in hierarchy order, it is also able to group them. When pages or paragraphs come in correct order, chapters and books also do it automatically. (It's no problem that the position information stored in eXist is incomplete when it comes to chapters.) The code for grouping must look at one entry in turn. Each time the book uri is different from the previous entry, a new book starts. Etc.
+
+(Here might follow an example of a grouped result, but I haven't got time, and some details haven't been decided.)
+
+THE STRUCTURE
+
+<?xml version="1.0" encoding="UTF-8"?>
+<talia:source xmlns:talia="http://www.talia.org">
+
+    <talia:metadata>
+    
+        <talia:maintype>contribution</talia:maintype>
+        <talia:type>transcription</talia:type>
+        <talia:subtype>hnml</talia:subtype>
+        <talia:uri>http://a.b.c/ccc</talia:uri>
+        <talia:authors>
+            <talia:author>
+                <talia:lastname>Williams</talia:lastname>
+                <talia:firstname>Andrew</talia:firstname>
+            </talia:author>
+            ...
+        </talia:authors>
+        <talia:title>...</talia:title>
+        <talia:standard_title>_#_medium_transcription_#_ _#_of_#_ K-6,171[4]</talia:standard_title>
+        <talia:language>it</talia:language>
+        <talia:date>2006-03-03</talia:date>
+        
+    </talia:metadata>
+
+    <talia:versions>
+    
+        <talia:version>
+        
+            <talia:version_type>xxx</talia:version_type>
+            <talia:version_layer>xxx</talia:version_layer>
+            <talia:preferred>true</talia:preferred>
+            
+            <talia:content>...</talia:content> 
+                OR 
+            <talia:uri>...</talia:uri>
+            
+        </talia:version>
+        
+        ...
+        
+    </talia:versions>
+    
+    <talia:macrocontributions>
+    
+        <talia:macrocontribution>
+        
+            <talia:uri>http://a.b.c/ABC</talia:uri>
+            
+            <talia:path>
+            
+                <talia:node>
+                
+                    <talia:granularity>book</talia:granularity>
+                    <talia:uri>http://a.b.c/ABC/hhh</talia:uri>
+                    <talia:title>Xxxx xx</talia:title>
+                    
+                    <!-- position of book within MC.
+                         a 6-digit zero-filled integer -->
+                    
+                    <talia:position>000003</talia:position>
+                    
+                </talia:node>
+                
+                <talia:node>
+                
+                    <talia:granularity>chapter</talia:granularity>
+                    <talia:uri>http://a.b.c/ABC/iii</talia:uri>
+                    <talia:title>Yyy yyyy yyy</talia:title>
+                    
+                    <!-- no position info for chapter -->
+                    
+                </talia:node>
+                
+                <talia:node>
+                
+                    <talia:granularity>paragraph</talia:granularity>
+                    <talia:uri>http://a.b.c/ABC/jjj</talia:uri>
+                    <talia:title>Zzz z zzzz zzzz</talia:title>
+                    
+                    <!-- position of paragraph within book.
+                         a 6-digit zero-filled integer -->
+                    
+                    <talia:position>000101</talia:position>
+                    
+                </talia:node>
+                
+            </talia:path>
+            
+            <!--
+            here the feed servlet will insert a <talia:search_key> element
+            with a value that can be used to find the contribution
+            when searching for slices.
+            it will contain info for the two main levels,
+            not chapter:
+                 
+            <talia:search_key>ABC.book.000003.para.000101</talia:search_key>
+             -->
+            
+        </talia:macrocontribution>
+        ...
+    </talia:macrocontributions>
+
+</talia:source>
+

@@ -24,15 +24,6 @@
 
     </talia:metadata>
 
-    <talia:macrocontributions>
-        <talia:macrocontribution>
-            <talia:position>ABC 00009 00006</talia:position>
-        </talia:macrocontribution>
-        <talia:macrocontribution>
-            <talia:position>XYZ 00001 00004</talia:position>
-        </talia:macrocontribution>
-    </talia:macrocontributions>
-
     <talia:versions>
 
         <talia:version>
@@ -94,6 +85,82 @@
         </talia:version>
 
     </talia:versions>
+
+    <talia:macrocontributions>
+
+        <talia:macrocontribution>
+
+            <talia:uri>http://a.b.c/ABC</talia:uri>
+
+            <talia:path>
+
+                <talia:node>
+
+                    <talia:granularity>book</talia:granularity>
+                    <talia:uri>http://a.b.c/ABC/hhh</talia:uri>
+                    <talia:title>Xxxx xx</talia:title>
+                    <talia:position>000009</talia:position>
+
+                </talia:node>
+
+                <talia:node>
+
+                    <talia:granularity>chapter</talia:granularity>
+                    <talia:uri>http://a.b.c/ABC/iii</talia:uri>
+                    <talia:title>Yyy yyyy yyy</talia:title>
+
+                </talia:node>
+
+                <talia:node>
+
+                    <talia:granularity>paragraph</talia:granularity>
+                    <talia:uri>http://a.b.c/ABC/jjj</talia:uri>
+                    <talia:title>Zzz z zzzz zzzz</talia:title>
+                    <talia:position>000006</talia:position>
+
+                </talia:node>
+
+            </talia:path>
+
+        </talia:macrocontribution>
+
+        <talia:macrocontribution>
+
+            <talia:uri>http://a.b.c/XYZ</talia:uri>
+
+            <talia:path>
+
+                <talia:node>
+
+                    <talia:granularity>book</talia:granularity>
+                    <talia:uri>http://a.b.c/XYZ/hhh</talia:uri>
+                    <talia:title>Xxxx xx</talia:title>
+                    <talia:position>000001</talia:position>
+
+                </talia:node>
+
+                <talia:node>
+
+                    <talia:granularity>chapter</talia:granularity>
+                    <talia:uri>http://a.b.c/XYZ/iii</talia:uri>
+                    <talia:title>Yyy yyyy yyy</talia:title>
+
+                </talia:node>
+
+                <talia:node>
+
+                    <talia:granularity>paragraph</talia:granularity>
+                    <talia:uri>http://a.b.c/XYZ/jjj</talia:uri>
+                    <talia:title>Zzz z zzzz zzzz</talia:title>
+                    <talia:position>000004</talia:position>
+
+                </talia:node>
+
+            </talia:path>
+
+        </talia:macrocontribution>
+
+    </talia:macrocontributions>
 
 </talia:source>
 
