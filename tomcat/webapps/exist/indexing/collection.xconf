@@ -22,7 +22,7 @@
     -->
 
     <!-- (namespace necessary here, even if not used _in_ this document) -->
-    <index xmlns:talia="http://www.talia.org/">
+    <index xmlns:talia="http://www.talia.org">
     
         <fulltext default="none" attributes="false">
             <!-- (the documents contain two copies of author data,

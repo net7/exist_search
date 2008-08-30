@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<talia:source xmlns:talia="http://www.talia.org/">
+<talia:source xmlns:talia="http://www.talia.org">
   <talia:metadata>
     <talia:maintype>contribution</talia:maintype>
     <talia:type>edition</talia:type>
@@ -56,7 +56,7 @@ auch auf dem Gebiete der Arbeit muss unser Losungswort sein: "Mehr Achtung vor d
 
 hyper: -> talia:
 
-xmlns:hyper="http://www.hyper.org" -> xmlns:talia="http://www.talia.org/"
+xmlns:hyper="http://www.hyper.org" -> xmlns:talia="http://www.talia.org"
 
 talia:data -> talia:content
 

@@ -20,8 +20,11 @@
       .feed {
         background-color: #EFE;
       }
-      .normalSearch {
+      .search {
         background-color: #CCF;
+      }
+      .wide {
+        width: 600px;
       }
     </style>
 
@@ -121,7 +124,7 @@
       </tr>
     </table>
 
-    <div class="normalSearch">
+    <div class="search">
       <h1>normal search</h1>
       <form id="normal-search-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/NormalSearch" method="post">
 
@@ -197,6 +200,127 @@
 
         limit <input type="text" name="limit" value="3"/>
         page <input type="text" name="page" value="1"/>
+
+        <hr/>
+
+        <input type="submit" value="search"/>
+
+      </form>
+    </div>
+
+    <div class="search">
+      <h1>macrocontribution search</h1>
+      <form id="macrocontribution-search-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/Search" method="post">
+
+        search type (must be mc) <input type="text" name="search_type" value="mc"/>
+
+        <hr/>
+
+        words/phrases <input type="text" name="words"/>
+
+        operator
+        <select id="operator_select" name="operator">
+          <option value="or"       selected="selected">or</option>
+          <option value="and"                         >and</option>
+          <option value="distance"                    >distance</option>
+        </select>
+
+        distance <input type="text" name="distance" value="1"/>
+
+        <hr/>
+
+        <!--
+
+        author <input type="text" name="author"/>
+
+        title <input type="text" name="title"/>
+
+        language
+        <select id="language_select" name="language">
+          <option value=""   selected="selected"></option>
+          <option value="de"                    >Deutsch</option>
+          <option value="it"                    >Italiano</option>
+          <option value="en"                    >English</option>
+          <option value="es"                    >Espanol</option>
+          <option value="fr"                    >Francais</option>
+          <option value="pt"                    >Portugues</option>
+        </select>
+
+        date <input type="text" name="date"/>
+
+        <hr/>
+
+        type
+        <select id="type_select" name="type" multiple="true">
+          <option value="essay"         selected="selected">essay</option>
+          <option value="comment"       selected="selected">comment</option>
+          <option value="transcription" selected="selected">transcription</option>
+          <option value="edition"       selected="selected">edition</option>
+          < ! - -
+          <option value="fax"           selected="selected">fax</option>
+          - - >
+          <option value="facsimile"     selected="selected">facsimile</option>
+          <option value="path"          selected="selected">path</option>
+        </select>
+
+        -->
+
+        (metadata search has been commented out)
+
+        <hr/>
+
+        from uri values <input type="text" name="mc_from" value="" class="wide"/>
+        <br/>
+        to uri values <input type="text" name="mc_to" value="" class="wide"/>
+        <br/>
+        single uri values <input type="text" name="mc" value="" class="wide"/>
+        <br/>
+        mc uri <input type="text" name="mc_all" value=""/>
+
+        <hr/>
+
+        preferred
+        <input type="checkbox" name="preferred" value="true"/>
+
+        version type
+        <select id="version_type_select" name="version_type">
+          <option value=""       selected="selected">(none)</option>
+          <option value="linear"                    >linear</option>
+          <option value="diplomatic"                >diplomatic</option>
+        </select>
+
+        version layer
+        <select id="version_layer_select" name="version_layer">
+          <option value=""  selected="selected">(none)</option>
+          <option value="0"                    >0</option>
+          <option value="1"                    >1</option>
+          <option value="2"                    >2</option>
+          <option value="3"                    >3</option>
+        </select>
+
+        <hr/>
+
+        order by (will only work with the first value)
+        <select id="orderby_select" name="orderby">
+          <option value="orderby" selected="selected">mc</option>
+          <option value="author"                     >author</option>
+          <option value="title"                      >title</option>
+          <option value="language"                   >language</option>
+          <option value="date"                       >date</option>
+          <option value="type"                       >type</option>
+          <option value="siglum"                     >siglum</option>
+        </select>
+
+        direction (???)
+        <select id="direction_select" name="direction">
+          <option value="ascending"  selected="selected">ascending</option>
+          <option value="descending"                    >descending</option>
+        </select>
+
+        <hr/>
+
+        limit (???) <input type="text" name="limit" value="3"/>
+        page (???) <input type="text" name="page" value="1"/>
 
         <hr/>
 
