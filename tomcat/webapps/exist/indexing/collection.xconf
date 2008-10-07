@@ -21,13 +21,17 @@
     
     -->
 
-    <!-- (namespace necessary here, even if not used _in_ this document) -->
-    <index xmlns:talia="http://www.talia.org">
+    <!--
+    (namespace necessary here, even if not used directly _in_ this document)
+    -->
+    <index xmlns:talia="http://trac.talia.discovery-project.eu/wiki/Exist#">
     
         <fulltext default="none" attributes="false">
-            <!-- (the documents contain two copies of author data,
-                 in the <metadata> and the <version> elements,
-                 and this index will cover them both) -->
+            <!--
+            (the documents contain two copies of author data,
+            in the <metadata> and the <version> elements,
+            and this index will cover them both)
+            -->
             <create qname="talia:author"/>
             <create qname="talia:title"/>
             <create qname="talia:content" content="mixed"/>
@@ -39,7 +43,11 @@
         <create qname="talia:date" type="xs:string"/>
         <create qname="talia:siglum" type="xs:string"/>
 
-        <create qname="talia:position" type="xs:string"/>
+        <create qname="talia:version_type" type="xs:string"/>
+        <create qname="talia:version_layer" type="xs:string"/>
+        <create qname="talia:preferred" type="xs:string"/>
+
+        <create qname="talia:search_key" type="xs:string"/>
 
     </index>
     

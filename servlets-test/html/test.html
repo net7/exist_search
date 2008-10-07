@@ -23,9 +23,6 @@
       .search {
         background-color: #CCF;
       }
-      .wide {
-        width: 600px;
-      }
     </style>
 
     <script type="text/javascript" src="javascript/prototype-1.6.0.2.js"></script>
@@ -58,6 +55,8 @@
     onload="javascript:$('select-xml').options[0].selected = true; $('select-xml').onchange()"
   >
 
+    <h1>This page accesses Øystein's system</h1>
+
     <div class="purge">
       <h1>purge</h1>
       <form id="purge-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/purge" method="post">
@@ -67,7 +66,11 @@
 
     <div class="store">
       <h1>store <small><small>(feed one contribution. first select local file in the list below. then - if desired - edit it in the textarea. then press 'store'. note - the format of these contributions aren't up to date)</small></small></h1>
-      <form id="store-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/store" method="post">
+      <form
+        id="store-form"
+        action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/store"
+        method="post"
+      >
         <table>
           <tr>
             <td valign="top">
@@ -126,7 +129,15 @@
 
     <div class="search">
       <h1>normal search</h1>
-      <form id="normal-search-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/NormalSearch" method="post">
+      <form
+        id="normal-search-form"
+        action="http://gandalf.aksis.uib.no:8080/mycommunity/Search"
+        method="post"
+      >
+
+        search type (must be "normal") <input type="text" name="search_type" value="normal"/>
+
+        <hr/>
 
         words/phrases <input type="text" name="words"/>
 
@@ -210,9 +221,13 @@
 
     <div class="search">
       <h1>macrocontribution search</h1>
-      <form id="macrocontribution-search-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/Search" method="post">
+      <form
+        id="macrocontribution-search-form"
+        action="http://gandalf.aksis.uib.no:8080/mycommunity/Search"
+        method="post"
+      >
 
-        search type (must be mc) <input type="text" name="search_type" value="mc"/>
+        search type (must be "mc") <input type="text" name="search_type" value="mc"/>
 
         <hr/>
 
@@ -269,13 +284,25 @@
 
         <hr/>
 
-        from uri values <input type="text" name="mc_from" value="" class="wide"/>
+        <table>
+          <tr>
+            <td>from uri values</td>
+            <td><input type="text" name="mc_from[]" value=""/></td>
+            <td><input type="text" name="mc_from[]" value=""/></td>
+            <td><input type="text" name="mc_from[]" value=""/></td>
+            <td><input type="text" name="mc_from[]" value=""/></td>
+          </tr>
+          <tr>
+            <td>to uri values
+            <td><input type="text" name="mc_to[]" value=""/></td>
+            <td><input type="text" name="mc_to[]" value=""/></td>
+            <td><input type="text" name="mc_to[]" value=""/></td>
+            <td><input type="text" name="mc_to[]" value=""/></td>
+          </tr>
+        </table>
+        single single uri value :-) <input type="text" name="mc_single" value=""/>
         <br/>
-        to uri values <input type="text" name="mc_to" value="" class="wide"/>
-        <br/>
-        single uri values <input type="text" name="mc" value="" class="wide"/>
-        <br/>
-        mc uri <input type="text" name="mc_all" value=""/>
+        mc uri <input type="text" name="mc" value=""/>
 
         <hr/>
 

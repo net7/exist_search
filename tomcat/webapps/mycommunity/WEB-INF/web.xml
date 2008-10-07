@@ -154,11 +154,20 @@
     </servlet>
 
     <servlet>
-      <servlet-name>MacrocontributionSearch</servlet-name>
-      <servlet-class>MacrocontributionSearch</servlet-class>
+      <servlet-name>Search</servlet-name>
+      <servlet-class>Search</servlet-class>
       <description>
-        This servlet handles a macrocontribution search request
-          .../MacrocontributionSearch
+        This servlet handles both a normal and a macrocontribution search request
+          .../Search
+      </description>
+    </servlet>
+
+    <servlet>
+      <servlet-name>XmlSearch</servlet-name>
+      <servlet-class>XmlSearch</servlet-class>
+      <description>
+        This servlet handles an experimental xml search request
+          .../XmlSearch
       </description>
     </servlet>
 
@@ -188,8 +197,13 @@
     </servlet-mapping>
 
     <servlet-mapping>
-      <servlet-name>MacrocontributionSearch</servlet-name>
-      <url-pattern>/MacrocontributionSearch</url-pattern>
+      <servlet-name>Search</servlet-name>
+      <url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>XmlSearch</servlet-name>
+      <url-pattern>/XmlSearch</url-pattern>
     </servlet-mapping>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
