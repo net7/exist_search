@@ -82,15 +82,17 @@
 
     <context-param>
       <param-name>collectionName</param-name>
-      <param-value>talia_test</param-value>
+      <param-value>mycollection</param-value>
       <description>name of the eXist collection where the contributions are stored</description>
     </context-param>
 
+    <!-- not used
     <context-param>
       <param-name>logFileName</param-name>
       <param-value>servlets.log</param-value>
       <description>name of log file, if ###</description>
     </context-param>
+    -->
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
