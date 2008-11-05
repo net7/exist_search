@@ -55,11 +55,11 @@
     onload="javascript:$('select-xml').options[0].selected = true; $('select-xml').onchange()"
   >
 
-    <h1>This page accesses Oystein's system</h1>
+    <h1>This page accesses Danilo's test system</h1>
 
     <div class="purge">
       <h1>purge</h1>
-      <form id="purge-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/purge" method="post">
+      <form id="purge-form" action="http://gandalf.aksis.uib.no:8080/nietzsche/FeedExist/purge" method="post">
         <input type="submit" value="purge"/>
       </form>
     </div>
@@ -68,7 +68,7 @@
       <h1>store <small><small>(feed one contribution. first select local file in the list below. then - if desired - edit it in the textarea. then press 'store'. note - the format of these contributions aren't up to date)</small></small></h1>
       <form
         id="store-form"
-        action="http://gandalf.aksis.uib.no:8080/mycommunity/FeedExist/store"
+        action="http://gandalf.aksis.uib.no:8080/nietzsche/FeedExist/store"
         method="post"
       >
         <table>
@@ -115,13 +115,15 @@
       </form>
     </div>
 
+    <!--
+
     <table>
       <tr>
 
         <td>
           <div class="feed">
             <h1>feed <small>(all contributions from the nietzschesource Hyper)</small></h1>
-            <form id="feed-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/ServiceToFeedExist" method="get">
+            <form id="feed-form" action="http://gandalf.aksis.uib.no:8080/nietzsche/ServiceToFeedExist" method="get">
               <input type="submit" value="feed"/>
             </form>
           </div>
@@ -130,7 +132,7 @@
         <td>
           <div class="feed">
             <h1>special feed <small>that just feeds a small subset, with made-up macrocontribution data</small></h1>
-            <form id="feed-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/ServiceToFeedExist" method="get">
+            <form id="feed-form" action="http://gandalf.aksis.uib.no:8080/nietzsche/ServiceToFeedExist" method="get">
               <input type="hidden" name="test" value="x"/>
               <input type="submit" value="feed"/>
             </form>
@@ -140,11 +142,13 @@
       </tr>
     </table>
 
+    -->
+
     <div class="search">
       <h1>normal search</h1>
       <form
         id="normal-search-form"
-        action="http://gandalf.aksis.uib.no:8080/mycommunity/Search"
+        action="http://gandalf.aksis.uib.no:8080/nietzsche/Search"
         method="post"
       >
 
@@ -186,8 +190,9 @@
 
         type
         <select id="type_select" name="type[]" multiple="true">
-          <!-- it suits at least me to be able to search for also AvMedia contributions here -->
+          <!-- I don't know if it suits Danilo to be able to search for also AvMedia contributions here
           <option value="AvMedia"            selected="selected">AvMedia</option>
+          -->
           <option value="essay"              selected="selected">essay</option>
           <option value="comment"            selected="selected">comment</option>
           <option value="transcription"      selected="selected">transcription</option>
@@ -241,7 +246,7 @@
       <h1>macrocontribution search</h1>
       <form
         id="macrocontribution-search-form"
-        action="http://gandalf.aksis.uib.no:8080/mycommunity/Search"
+        action="http://gandalf.aksis.uib.no:8080/nietzsche/Search"
         method="post"
       >
 
@@ -378,7 +383,7 @@
       <h1>media search</h1>
       <form
         id="media-search-form"
-        action="http://gandalf.aksis.uib.no:8080/mycommunity/Search"
+        action="http://gandalf.aksis.uib.no:8080/nietzsche/Search"
         method="post"
       >
 

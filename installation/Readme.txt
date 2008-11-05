@@ -1,0 +1,1 @@
+For installation instructions see <http://trac.talia.discovery-project.eu/wiki/ExistAndServletsInstallation>.

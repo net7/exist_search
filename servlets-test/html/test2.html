@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE
+  html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>XML Search Test</title>
+
+    <style type="text/css">
+      .xml-search {
+        background-color: #CFF;
+    </style>
+
+    <script type="text/javascript" src="javascript/prototype-1.6.0.2.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="xml-search">
+      <h1>xml search</h1>
+      <form id="xml-search-form" action="http://gandalf.aksis.uib.no:8080/mycommunity/XmlSearch" method="post">
+
+        Find occurrences of element
+
+        <select id="element_select" name="element">
+          <option value=""     selected="selected">(any element)</option>
+          <option value="div"                     >div</option>
+          <option value="span"                    >span</option>
+          <option value="p"                       >p</option>
+        </select>
+
+        with attribute
+
+        <select id="attribute_select" name="attribute">
+          <option value=""      selected="selected" >(attribute irrelevant)</option>
+          <option value="*"                         >(any attribute)</option>
+          <option value="class"                     >class</option>
+          <option value="somethingelse"             >somethingelse</option>
+        </select>
+
+        with attribute value
+
+        <input type="text" id="attribute_value_input" name="attribute_value"/>
+
+        <br/>
+
+        that contain the word(s):
+
+        <input type="text" id="words_input" name="words"/>
+
+        with operator
+
+        <select id="operator_select" name="operator">
+          <option value="or"       selected="selected">or</option>
+          <option value="and"                         >and</option>
+          <option value="distance"                    >distance</option>
+        </select>
+
+        distance <input type="text" name="distance" value="1"/>
+
+        <input type="submit" name="submit" value="Go!"/>
+
+        <br/>
+        e.g,
+        <br/>
+        &lt;div class="edition-text"&gt;
+        <br/>
+        &lt;span class="head"&gt;
+        <br/>
+        &lt;span class="sp"&gt;
+
+      </form>
+    </div>
+
+  </body>
+
+</html>
+
+
+<!--
+
+(all)
+
+add
+    (all)
+    rend
+        (all)
+        wab-el
+        wab-i
+        wab-im
+        wab-our
+
+del
+    (all)
+    type
+        (all)
+        wab-npc
+        wab-npcn
+        wab-tra
+        wab-tran
+        wab-trs
+        wab-trsn
+
+
+corr
+    (all)
+    type
+        (all)
+        wab-d
+        wab-dn
+        wab-dnpc
+
+rdg
+    (all)
+    type
+        (all)
+        alt1
+        alt2
+        wab-em1
+        wab-em2
+        wab-o1
+        wab-o2
+
+q
+
+fw
+    (all)
+    type
+        (all)
+        pagen
+    place
+        top right
+
+        <select id="element_select" name="element">
+          <option value=""     selected="selected">(any element)</option>
+          <option value="add"                     >add</option>
+          <option value="corr"                    >corr</option>
+          <option value="del"                     >del</option>
+        </select>
+
+        with attribute
+
+        <select id="attribute_select" name="attribute">
+          <option value=""      selected="selected" >(attribute irrelevant)</option>
+          <option value="*"                         >(any attribute)</option>
+          <option value="rend"                      >add</option>
+          <option value="type"                      >corr</option>
+          <option value="place"                     >del</option>
+        </select>
+
+-->
+

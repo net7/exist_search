@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talia:source xmlns:talia="http://trac.talia.discovery-project.eu/wiki/Exist#">
+    <talia:metadata>
+        <talia:maintype>contribution</talia:maintype>
+        <talia:type>AvMedia</talia:type>
+        <talia:uri>http://localhost:3000/av_media_sources/title</talia:uri>
+        <talia:authors>
+            <talia:author>
+                <talia:firstname>author</talia:firstname>
+                <talia:lastname/>
+                <talia:uri/>
+            </talia:author>
+        </talia:authors>
+        <talia:title>title</talia:title>
+        <talia:standard_title>title</talia:standard_title>
+        <talia:language/>
+        <talia:date>year</talia:date>
+        <talia:length>lenght h:mm:ss</talia:length>
+        <talia:bibliography>bibliography</talia:bibliography>
+        <talia:keywords>
+            <talia:keyword>keywords</talia:keyword>
+        </talia:keywords>
+    </talia:metadata>
+    <talia:versions>
+        <talia:version>
+            <talia:content>
+                <talia:abstract>abstract</talia:abstract>
+            </talia:content>
+        </talia:version>
+    </talia:versions>
+    <talia:macrocontributions/>
+</talia:source>

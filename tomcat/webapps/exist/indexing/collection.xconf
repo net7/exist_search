@@ -34,6 +34,7 @@
             -->
             <create qname="talia:author"/>
             <create qname="talia:title"/>
+            <create qname="talia:abstract"/>
             <create qname="talia:content" content="mixed"/>
         </fulltext>
         
