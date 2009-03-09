@@ -28,7 +28,7 @@
       and for doing the search.
       Supports both normal search (full text, metadata)
       and macrocontribution search (full text, metadata, restriction to subsets).
-    </description>
+    </description>    
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
@@ -54,7 +54,7 @@
 
     <context-param>
       <param-name>tomcatHost</param-name>
-      <param-value>gandalf.aksis.uib.no</param-value>
+      <param-value>localhost</param-value>
       <description>url of server where Tomcat and eXist and the servlets reside</description>
     </context-param>
 
@@ -66,7 +66,7 @@
 
     <context-param>
       <param-name>existContextpath</param-name>
-      <param-value>exist-1.2.0</param-value>
+      <param-value>eXist-1.2.5</param-value>
       <description>eXist runs as a web application under Tomcat.
                    this parameter is the "context path" of eXist
                    = the web application name of eXist
@@ -76,14 +76,20 @@
 
     <context-param>
       <param-name>existPass</param-name>
-      <param-value>hat81ygg</param-value>
+      <param-value>password</param-value>
       <description>admin password for eXist</description>
     </context-param>
 
     <context-param>
       <param-name>collectionName</param-name>
-      <param-value>mycollection</param-value>
+      <param-value>collection</param-value>
       <description>name of the eXist collection where the contributions are stored</description>
+    </context-param>
+
+    <context-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+      <description>character encoding</description>
     </context-param>
 
     <!-- not used
@@ -122,55 +128,69 @@
     You can define any number of servlets, including zero.
     -->
 
+    
     <!-- define servlets -->
-
-    <servlet>
-      <servlet-name>FeedExist</servlet-name>
-      <servlet-class>FeedExist</servlet-class>
-      <description>
-        This servlet handles requests
+    
+    <!--  FEED EXIST 
+            This servlet handles requests
           .../FeedExist/purge (clear the eXist collection of all contributions)
         and
           .../FeedExist/store (feed eXist with one contribution)
-      </description>
+    -->
+    
+    <servlet>
+      <servlet-name>FeedExist</servlet-name>
+      <servlet-class>FeedExist</servlet-class>
     </servlet>
+    
+    <!--  SERVICE TO FEED EXIST SERVLET 
+    
+        This servlet is a preliminary thing
+        that simulates a Talia service
+        that feeds eXist with _all_ contributions.
+        Should be removed when the Talia service has been implemented    
+    -->
 
     <servlet>
       <servlet-name>ServiceToFeedExist</servlet-name>
       <servlet-class>ServiceToFeedExist</servlet-class>
-      <description>
-        This servlet is a preliminary thing
-        that simulates a Talia service
-        that feeds eXist with _all_ contributions.
-        Should be removed when the Talia service has been implemented
-      </description>
     </servlet>
+    
+    <!-- NORMAL SEARCH
+    
+         This servlet handles a "normal" search request
+          .../NormalSearch   
+    -->
 
     <servlet>
       <servlet-name>NormalSearch</servlet-name>
       <servlet-class>NormalSearch</servlet-class>
-      <description>
-        This servlet handles a "normal" search request
-          .../NormalSearch
-      </description>
     </servlet>
+
+	<!--  SEARCH
+	
+        This servlet handles both a normal and a macrocontribution search request
+          .../Search	
+	-->
 
     <servlet>
       <servlet-name>Search</servlet-name>
       <servlet-class>Search</servlet-class>
-      <description>
-        This servlet handles both a normal and a macrocontribution search request
-          .../Search
-      </description>
+              
+		<init-param>
+          <param-name>log4j-init-file</param-name>
+          <param-value>WEB-INF/log4j.xml</param-value>
+        </init-param>
     </servlet>
+    
+    <!--  XML SEARCH
+            This servlet handles an experimental xml search request
+          .../XmlSearch
+    -->
 
     <servlet>
       <servlet-name>XmlSearch</servlet-name>
       <servlet-class>XmlSearch</servlet-class>
-      <description>
-        This servlet handles an experimental xml search request
-          .../XmlSearch
-      </description>
     </servlet>
 
     <!-- define mappings -->
